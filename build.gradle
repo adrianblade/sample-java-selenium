@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'com.adr'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven { url "https://plugins.gradle.org/m2/" }
+
+}
+
+dependencies {
+    testImplementation('org.seleniumhq.selenium:selenium-java:4.0.0-alpha-3')
+    testImplementation('org.seleniumhq.selenium:selenium-api:4.0.0-alpha-3')
+    testImplementation('org.seleniumhq.selenium:selenium-chrome-driver:4.0.0-alpha-3')
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
